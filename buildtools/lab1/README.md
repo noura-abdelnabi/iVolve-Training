@@ -7,7 +7,7 @@ This project demonstrates the process of building, testing, and packaging a Java
 * Gradle installed.
 
 > **Screenshot:**
-> *(C:\Users\Admin\Desktop\Career\NTI\iVolve\LAB1\install gradle.png)*
+> *(C:\Users\Admin\Desktop\Career\NTI\iVolve\LAB1\install gradle.PNG)*
 
 ## 🚀 Steps Performed
 
@@ -18,7 +18,7 @@ git clone [https://github.com/Ibrahim-Adel15/build1.git](https://github.com/Ibra
 
 ```
 > **Screenshot:**
-> *(C:\Users\Admin\Desktop\Career\NTI\iVolve\LAB1\clone lab1-repo.png)*
+> *(C:\Users\Admin\Desktop\Career\NTI\iVolve\LAB1\clone lab1-repo.PNG)*
 > 
 ### 2. Run Unit Tests
 
@@ -30,7 +30,7 @@ gradle test
 ```
 
 > **Screenshot:**
-> *(C:\Users\Admin\Desktop\Career\NTI\iVolve\LAB1\Run Unit Test.png)*
+> *(C:\Users\Admin\Desktop\Career\NTI\iVolve\LAB1\Run Unit Test.PNG)*
 
 ### 3. Build and Package the Application
 
@@ -46,7 +46,7 @@ The artifact was successfully generated at:
 `build/libs/ivolve-app.jar`
 
 > **Screenshot:**
-> *(C:\Users\Admin\Desktop\Career\NTI\iVolve\LAB1\build to generate ivolve-app.jar.png)*
+> *(C:\Users\Admin\Desktop\Career\NTI\iVolve\LAB1\build to generate ivolve-app.jar.PNG)*
 
 ### 4. Run and Verify the Application
 
@@ -58,11 +58,9 @@ java -jar build/libs/ivolve-app.jar
 ```
 
 > **Screenshot:**
-> *(C:\Users\Admin\Desktop\Career\NTI\iVolve\LAB1\Run App.png)*
+> *(C:\Users\Admin\Desktop\Career\NTI\iVolve\LAB1\Run App.PNG)*
 ---
 
 ```
-
-**تحبي أجهزلك الكود الجاهز لـ Lab 2 بتاع Maven ولا هتعرفي تعدليه بناءً على ده؟**
 
 ```
