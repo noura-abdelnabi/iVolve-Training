@@ -68,7 +68,3 @@ java -jar build/libs/ivolve-app.jar
 > <img width="823" height="96" alt="Run App" src="https://github.com/user-attachments/assets/5adc9e94-ac96-4d51-b713-43269bc0f75d" />
 
 ---
-
-```
-
-```
