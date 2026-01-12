@@ -90,7 +90,3 @@ docker rm container1
 > <img width="1245" height="366" alt="stop   delete the container" src="https://github.com/user-attachments/assets/5c5e16ef-e892-47fe-9139-821ed5bcf4c9" />
 
 ---
-
-```
-
-```
