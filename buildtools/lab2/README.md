@@ -67,7 +67,3 @@ java -jar target/hello-ivolve-1.0-SNAPSHOT.jar
 > <img width="921" height="88" alt="Run App" src="https://github.com/user-attachments/assets/1e771acd-6d13-4821-a320-9ed5b094c119" />
 
 ---
-
-```
-
-```
