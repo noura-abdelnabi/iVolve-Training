@@ -23,7 +23,7 @@ git clone https://github.com/Ibrahim-Adel15/Docker-1.git
 We build the project to generate the executable JAR file.
 
 ```bash
-./mvn package
+mvn package
 
 ```
 
@@ -54,7 +54,7 @@ A `Dockerfile` was created with the following requirements:
 Building the Docker image and checking its size as requested.
 
 ```bash
-docker build -t app2 .
+docker build -t lab4 .
 docker images
 
 ```
@@ -71,7 +71,7 @@ docker images
 Launching the container from the `app2` image.
 
 ```bash
-docker run -d -p 8080:8080 --name container2 app2
+docker run -d --name container4 -p 8080:8080 lab4
 
 ```
 
