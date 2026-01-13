@@ -112,6 +112,3 @@ docker ps -a
 > **Screenshot (Cleanup):**
 >
 > <img width="1175" height="193" alt="stop   remove container" src="https://github.com/user-attachments/assets/7cf46ef3-19ed-4cd9-8463-4c5506dc0519" />
-
-
-```
