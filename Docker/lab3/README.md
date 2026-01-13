@@ -74,7 +74,7 @@ docker images
 Run the optimized container.
 
 ```bash
-docker run -d --name container5 -p 8083:8080 app5
+docker run -d --name container5 -p 8083:8080 lab5
 
 ```
 
