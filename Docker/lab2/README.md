@@ -103,8 +103,9 @@ curl localhost:8082
 Cleaning up the environment by stopping and removing the container.
 
 ```bash
-docker stop container2
-docker rm container2
+docker stop container4
+docker rm container4
+docker ps -a
 
 ```
 
