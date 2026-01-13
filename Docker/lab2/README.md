@@ -71,7 +71,7 @@ docker images
 Launching the container from the `app2` image.
 
 ```bash
-docker run -d --name container4 -p 8080:8080 lab4
+docker run -d --name container4 -p 8082:8080 lab4
 
 ```
 
@@ -85,6 +85,11 @@ docker run -d --name container4 -p 8080:8080 lab4
 ## 🧪 Step 6: Test the Application
 
 Testing the application in the browser or via terminal to ensure it's working.
+
+```bash
+curl localhost:8082
+
+```
 
 > **Screenshot (Application Preview):**
 >
