@@ -75,7 +75,7 @@ Build frontend image:
 docker build -t frontend-image .
 ```
 
-📸 **Screenshot Placeholder:**
+📸 **Screenshot:**
 
 > Frontend image build
 >
@@ -129,18 +129,18 @@ docker run -d --name frontend2-container -p 5002:5000 frontend-image
 ### 🔍 Verify Communication
 
 ```bash
-docker exec -it frontend1 ping backend
+docker exec -it frontend-container ping backend-container
 ```
 
 ✔️ Successful communication
 
 ```bash
-docker exec -it frontend2 ping backend
+docker exec -it frontend2-container ping backend-container
 ```
 
 ❌ Failed communication (different network)
 
-📸 **Screenshot Placeholder:**
+📸 **Screenshot:**
 
 > Network communication test
 > <img width="1047" height="379" alt="verifying" src="https://github.com/user-attachments/assets/2c7d053d-d9c8-498d-8d15-dc1b3b7e28bf" />
@@ -156,7 +156,7 @@ docker network rm ivolve-network
 docker network ls
 ```
 
-📸 **Screenshot Placeholder:**
+📸 **Screenshot:**
 
 > Network removed
 > <img width="682" height="181" alt="rm net" src="https://github.com/user-attachments/assets/eecc230e-939e-4c87-89db-4e993ea5adff" />
