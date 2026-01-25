@@ -29,4 +29,3 @@ kubectl describe nodeminikube-m02
 ### Screenshots:
 >
 > <img width="974" height="89" alt="verification" src="https://github.com/user-attachments/assets/292f5fc4-4ac9-4618-8ece-1d14d3ab19d3" />
-غل الملفات؟**
