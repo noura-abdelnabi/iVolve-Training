@@ -19,7 +19,7 @@ data:
 
 ```
 
-##Screenshot
+## Screenshot
 >
 > <img width="380" height="217" alt="config yaml" src="https://github.com/user-attachments/assets/0d81e752-f361-49cf-91ef-3cbd28c4997a" />
 
@@ -31,7 +31,7 @@ kubectl get configmap mysql-config
 kubectl describe configmap mysql-config
 ```
 
-##Screenshot
+## Screenshot
 >
 > <img width="1028" height="115" alt="apply verify" src="https://github.com/user-attachments/assets/8a3b1c1b-2a2d-41ba-bab4-8302763181df" />
 >
@@ -58,7 +58,7 @@ data:
 
 ```
 
-##Screenshot
+## Screenshot
 >
 > <img width="875" height="91" alt="base 64 " src="https://github.com/user-attachments/assets/ab5aab5e-c77f-495e-acbb-04dd3d2afa43" />
 >
@@ -74,7 +74,7 @@ kubectl get secret mysql-secret
 kubectl describe secret mysql-secret
 ```
 
-##Screenshot
+## Screenshot
 >
 > <img width="872" height="114" alt="apply verify sc" src="https://github.com/user-attachments/assets/4433b305-db32-4387-b27c-e479251f3450" />
 >
