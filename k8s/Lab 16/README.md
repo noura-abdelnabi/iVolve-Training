@@ -14,7 +14,8 @@ Automate the database schema and user creation process using an **Init Container
   
 ## Screenshot
 >
-> <img width="883" height="304" alt="init" src="https://github.com/user-attachments/assets/ded82678-c4df-4d5c-bc82-d9c8bf878b9a" />
+> <img width="874" height="284" alt="init" src="https://github.com/user-attachments/assets/81f279e3-8400-4cba-be71-6cbd79a17c8c" />
+
 ---
 
 ## Verification Process
