@@ -18,15 +18,6 @@ Automate the database schema and user creation process using an **Init Container
 
 ---
 
-## Verification Process
-
-The following steps were taken to verify the successful execution of the init container:
-
-1. **Pod Lifecycle:** Observed the pod transition from `Init:0/1` to `PodInitializing` and finally to `Running`.
-2. **Manual DB Check:** Connected to the MySQL pod manually to confirm the existence of the schema.
-
----
-
 ## Final Verification (Screenshots)
 
 ### 1. Database Creation
