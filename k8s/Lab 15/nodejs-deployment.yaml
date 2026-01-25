@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-app
+spec:
+  replicas: 2 
+  selector:
+    matchLabels:
+      app: nodejs
+  template:
+    metadata:
+      labels:
+        app: nodejs
+    spec:
+      tolerations:  
+      - key: "node"
+        operator: "Equal"
+        value: "worker"
+        effect: "NoSchedule"
+
+      containers:
+      - name: nodejs-container
+        image: nouraabdelnabi/web-app:latest # Docker Hub image for node.js
+        envFrom: 
+        - configMapRef:
+            name: mysql-config
+        - secretRef:
+            name: mysql-secret
+        volumeMounts:
+        - name: app-storage
+          mountPath: /usr/src/app/logs
+      volumes:
+      - name: app-storage
+        persistentVolumeClaim:
+          claimName: log-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-service
+spec:
+  type: ClusterIP
+  selector:
+    app: nodejs
+  ports:
+  - port: 80
+    targetPort: 3000
+
