@@ -12,7 +12,8 @@ Since we are using `hostPath`, the directory must exist on the Kubernetes node w
 * Set permissions: `sudo chmod 777 /mnt/app-logs`
 
 
-
+## Screenshot
+>
 > **<img width="624" height="110" alt="SSH MINIKUBE" src="https://github.com/user-attachments/assets/236b03ae-19a8-45f5-90ca-265348dd634c" />**
 
 ---
@@ -63,6 +64,8 @@ spec:
       storage: 1Gi 
 
 ```
+## Screenshot
+>
 > **<img width="467" height="580" alt="STORAGE YAML" src="https://github.com/user-attachments/assets/7a0523ef-046a-4648-82ae-c150a945330a" />**
 
 ---
@@ -76,7 +79,6 @@ kubectl get pv
 kubectl get pvc 
 
 ```
-
+## Screenshot
+>
 > **<img width="1032" height="245" alt="VERIFY" src="https://github.com/user-attachments/assets/5de475f2-adab-4dc7-95f2-3d804d1fd1be" />**
-
-**تحبي أعملك نفس التنسيق ده لـ Lab 14 عشان تخلصي الـ Documentation كله النهاردة؟**
