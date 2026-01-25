@@ -20,12 +20,11 @@ spec:
       initContainers:
       - name: init-db
         image: mysql:5.7 #
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mysql-secret
-              key: MYSQL_ROOT_PASSWORD
+        envFrom:
+        - configMapRef:
+            name: mysql-config
+        - secretRef:
+            name: mysql-credentials
         command: 
         - "/bin/sh"
         - "-c"
