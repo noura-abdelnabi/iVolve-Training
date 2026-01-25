@@ -102,7 +102,7 @@ kubectl describe pod mysql-0
 
 ```bash
 # Connect to MySQL
-kubectl exec -it mysql-0 -n ivolve -- mysql -u root -prootpassword
+kubectl exec -it mysql-0 -- mysql -u root -prootpassword
 
 ```
 ## Screenshot
