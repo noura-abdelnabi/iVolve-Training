@@ -15,6 +15,9 @@
 # quota.yaml
 apiVersion: v1
 kind: ResourceQuota
+matadata:
+   name: pod-quota
+   namespace: ivolve
 spec:
   hard:
     pods: "2"
