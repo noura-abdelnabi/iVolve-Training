@@ -53,8 +53,8 @@ metadata:
   name: mysql-credentials
 type: Opaque
 data:
-  DB_PASSWORD: <YOUR_BASE64_PASSWORD>
-  MYSQL_ROOT_PASSWORD: <YOUR_BASE64_ROOT_PASSWORD>
+  DB_PASSWORD: cGFzc3dvcmQxMjM=
+  MYSQL_ROOT_PASSWORD: cm9vdHBhc3N3b3Jk
 
 ```
 
@@ -79,5 +79,3 @@ kubectl describe secret mysql-secret
 > <img width="872" height="114" alt="apply verify sc" src="https://github.com/user-attachments/assets/4433b305-db32-4387-b27c-e479251f3450" />
 >
 > <img width="844" height="267" alt="describe sc" src="https://github.com/user-attachments/assets/222db25e-25c1-46f5-928a-984163c99567" />
- 
-**هل تريدين مني إضافة ملف Pod كـ "Bonus" يوضح كيف نستخدم هذه الإعدادات داخل Container؟**
