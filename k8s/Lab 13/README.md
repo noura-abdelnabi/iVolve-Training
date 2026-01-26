@@ -14,7 +14,7 @@ Since we are using `hostPath`, the directory must exist on the Kubernetes node w
 
 ## Screenshot
 >
-> **<img width="624" height="110" alt="SSH MINIKUBE" src="https://github.com/user-attachments/assets/236b03ae-19a8-45f5-90ca-265348dd634c" />**
+> <img width="819" height="147" alt="ىثnew ssh" src="https://github.com/user-attachments/assets/037c15f9-7bde-4dc3-868e-71332c61e4f1" />
 
 ---
 
