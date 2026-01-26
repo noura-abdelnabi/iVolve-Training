@@ -15,7 +15,7 @@ metadata:
   name: mysql-config
   namespace: ivolve
 data:
-  DB_HOST: "mysql-service"
+  DB_HOST: "mysql-headless"
   DB_USER: "ivolve-user"
 
 ```
