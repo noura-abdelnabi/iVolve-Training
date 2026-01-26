@@ -22,13 +22,13 @@ Deploy a custom Node.js application with high availability and proper resource s
 | Replicas | 2 | Desired State |
 
 ## Screenshot
->
 > Deployment Yaml File
+> 
 > <img width="767" height="691" alt="new deploy" src="https://github.com/user-attachments/assets/c0f0f221-715f-4584-9635-5ae1013a406e" />
 >
 > Service Yaml File
+> 
 > <img width="408" height="256" alt="new service" src="https://github.com/user-attachments/assets/5d2078be-c19e-404d-9158-b43fb5bdc7b2" />
-
 
 ---
 
