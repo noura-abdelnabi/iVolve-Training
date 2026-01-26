@@ -22,21 +22,20 @@ data:
 
 ## Screenshot
 >
-> <img width="380" height="217" alt="config yaml" src="https://github.com/user-attachments/assets/0d81e752-f361-49cf-91ef-3cbd28c4997a" />
+> <img width="519" height="177" alt="new cm" src="https://github.com/user-attachments/assets/b69b8b66-9345-4bf4-9ee3-50aa211d9738" />
+
 
 To verify the creation and content of Configmap:
 
 ```bash
 # Verify ConfigMap
-kubectl get configmap mysql-config
-kubectl describe configmap mysql-config
+kubectl get configmap mysql-config -n ivolve
+kubectl describe configmap mysql-config -n ivolve
 ```
 
 ## Screenshot
 >
-> <img width="1028" height="115" alt="apply verify" src="https://github.com/user-attachments/assets/8a3b1c1b-2a2d-41ba-bab4-8302763181df" />
->
-> <img width="1032" height="467" alt="describe cm" src="https://github.com/user-attachments/assets/4402ecad-66cd-45ec-8e5c-b12fea7395ab" />
+> <img width="870" height="554" alt="new cm desc" src="https://github.com/user-attachments/assets/fc5ff350-3563-4ad2-a4ff-4b464931ccd2" />
 
 ---
 
@@ -64,7 +63,7 @@ data:
 >
 > <img width="875" height="91" alt="base 64 " src="https://github.com/user-attachments/assets/ab5aab5e-c77f-495e-acbb-04dd3d2afa43" />
 >
-> <img width="475" height="254" alt="secret yamlfile" src="https://github.com/user-attachments/assets/0e7adbd2-1d7f-4c85-8e14-f39ffa7329de" />
+> <img width="525" height="200" alt="new sc" src="https://github.com/user-attachments/assets/8a24241e-aa25-4007-9883-6ae2676b7043" />
 
 ---
 
@@ -72,12 +71,12 @@ To verify the creation and content of Secret:
 
 ```bash
 # Verify Secret
-kubectl get secret mysql-secret
-kubectl describe secret mysql-secret
+kubectl get secret mysql-secret -n ivolve
+kubectl describe secret mysql-secret -n ivolve
 ```
 
 ## Screenshot
 >
-> <img width="872" height="114" alt="apply verify sc" src="https://github.com/user-attachments/assets/4433b305-db32-4387-b27c-e479251f3450" />
->
-> <img width="844" height="267" alt="describe sc" src="https://github.com/user-attachments/assets/222db25e-25c1-46f5-928a-984163c99567" />
+> <img width="809" height="336" alt="new sc desc" src="https://github.com/user-attachments/assets/f8d0de6b-acaa-47f0-b269-2b92de1ed0d5" />
+
+
