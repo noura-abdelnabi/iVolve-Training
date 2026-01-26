@@ -13,6 +13,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mysql-config
+  namespace: ivolve
 data:
   DB_HOST: "mysql-service"
   DB_USER: "ivolve-user"
@@ -50,7 +51,8 @@ Used to store sensitive MySQL credentials securely (`DB_PASSWORD` and `MYSQL_ROO
 apiVersion: v1
 kind: Secret
 metadata:
-  name: mysql-credentials
+  name: mysql-secret
+  namespace: ivolve
 type: Opaque
 data:
   DB_PASSWORD: cGFzc3dvcmQxMjM=
