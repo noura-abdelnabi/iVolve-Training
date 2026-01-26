@@ -8,7 +8,7 @@ The goal of this lab is to implement a zero-trust security model within the clus
 
 * **Network Policy Creation:** Designed a policy named `allow-app-to-mysql` to manage Ingress traffic.
 * **Target Selection:** Used `podSelector` to apply the policy specifically to pods labeled with `app: mysql`.
-* **Ingress Rule Configuration:** * Allowed traffic strictly from pods with the label `app: nodejs`.
+* **Ingress Rule Configuration:**  Allowed traffic strictly from pods with the label `app: nodejs`.
 * Restricted access to the standard MySQL port **3306**.
 
 ## Screenshot
