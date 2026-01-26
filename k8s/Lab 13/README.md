@@ -55,6 +55,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: log-pvc
+  namespace: ivolve
 spec:
   storageClassName: manual
   accessModes:
