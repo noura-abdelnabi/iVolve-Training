@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nodejs-app
+  namespace: ivolve
 spec:
   replicas: 2 
   selector:
@@ -24,16 +25,27 @@ spec:
         - configMapRef:
             name: mysql-config
         - secretRef:
-            name: mysql-credentials
+            name: mysql-csecret
         command: 
         - "/bin/sh"
         - "-c"
         - |
-          mysql -h mysql-headless -u root -p"$MYSQL_ROOT_PASSWORD" -e "CREATE DATABASE IF NOT EXISTS ivolve; CREATE USER IF NOT EXISTS '$DB_USER'@'%' IDENTIFIED BY '$DB_PASSWORD'; GRANT ALL PRIVILEGES ON ivolve.* TO '$DB_USER'@'%';"
+          mysql -h $DB_HOST -u root -p$MYSQL_ROOT_PASSWORD <<EOF
+          CREATE DATABASE IF NOT EXISTS ivolve;
+          CREATE USER IF NOT EXISTS 'ivolve_user'@'%' IDENTIFIED BY '$DB_PASSWORD';
+          GRANT ALL PRIVILEGES ON ivolve.* TO 'ivolve_user'@'%';
+          EOF
 
       containers:
       - name: nodejs-container
         image: nouraabdelnabi/web-app:latest # Docker Hub image for node.js
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "200m"
+            memory: "256Mi"
         envFrom: 
         - configMapRef:
             name: mysql-config
@@ -51,6 +63,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nodejs-service
+  namespace: ivolve
 spec:
   type: ClusterIP
   selector:
