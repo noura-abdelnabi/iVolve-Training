@@ -23,9 +23,10 @@ Deploy a custom Node.js application with high availability and proper resource s
 
 ## Screenshot
 >
-> <img width="625" height="649" alt="DEPLOY YAML" src="https://github.com/user-attachments/assets/64305b0b-61d7-4ba5-a6f9-c2ab051f1fe3" />
+> <img width="767" height="691" alt="new deploy" src="https://github.com/user-attachments/assets/c0f0f221-715f-4584-9635-5ae1013a406e" />
 >
-> <img width="280" height="217" alt="SERVICE YAML" src="https://github.com/user-attachments/assets/b3714b4a-18b4-45b1-bec3-3e18bb78f0b4" />
+> <img width="408" height="256" alt="new service" src="https://github.com/user-attachments/assets/5d2078be-c19e-404d-9158-b43fb5bdc7b2" />
+
 
 ---
 
@@ -33,11 +34,11 @@ Deploy a custom Node.js application with high availability and proper resource s
 
 ### 1. Deployment & Service Status
 
-> <img width="808" height="254" alt="VERIFY" src="https://github.com/user-attachments/assets/4cc264cc-2a70-4f38-b4a4-cd4c844e6fab" />
-
+> <img width="919" height="377" alt="new verify" src="https://github.com/user-attachments/assets/ffc3d3e8-c425-4cee-a0fb-fee29f169ae2" />
+ 
 
 ### 2. Node Scheduling (Toleration Proof)
 
 Both pods are running successfully, proving that the `toleration` is correctly matching the node `taint`.
 
-> <img width="1050" height="77" alt="PODS" src="https://github.com/user-attachments/assets/907ee60a-7acc-48a9-b04e-101f1123021e" />*
+> <img width="1193" height="118" alt="newpods" src="https://github.com/user-attachments/assets/a51c031b-b14f-4f8f-830a-6fd2cddba871" />
