@@ -14,7 +14,7 @@ Automate the database schema and user creation process using an **Init Container
   
 ## Screenshot
 >
-> <img width="874" height="284" alt="init" src="https://github.com/user-attachments/assets/81f279e3-8400-4cba-be71-6cbd79a17c8c" />
+> <img width="676" height="324" alt="init" src="https://github.com/user-attachments/assets/582531c2-3909-46f1-82de-08164cfb8c0b" />
 
 ---
 
@@ -24,7 +24,7 @@ Automate the database schema and user creation process using an **Init Container
 
 The `ivolve` database was successfully created by the init container before the application pod started.
 
-> <img width="837" height="455" alt="db ivolve" src="https://github.com/user-attachments/assets/39afb525-9b02-4465-bec6-aefd60d0d853" />
+> <img width="948" height="552" alt="db" src="https://github.com/user-attachments/assets/57ea4a3a-1561-4746-ac0b-e31b90ac0459" />
 
 
 ### 2. User Privileges
