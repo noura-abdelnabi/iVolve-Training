@@ -13,6 +13,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mysql-headless
+  namespace: ivolve
 spec:
   ports:
   - port: 3306
@@ -23,7 +24,8 @@ spec:
 ```
 ## Screenshot
 >
-> <img width="364" height="251" alt="YAML OF SERVICE" src="https://github.com/user-attachments/assets/b512232c-a3d4-4c13-a30b-3a18b0851de0" />
+> <img width="379" height="258" alt="new servcie" src="https://github.com/user-attachments/assets/12bdaca2-edc0-40d5-91d5-9f2521b3d245" />
+
 
 ---
 
@@ -43,6 +45,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mysql
+  namespace: ivolve
 spec:
   serviceName: "mysql-headless"
   replicas: 1
@@ -74,7 +77,8 @@ spec:
 ```
 ## Screenshot
 >
-> <img width="379" height="598" alt="STATEFUL YAML" src="https://github.com/user-attachments/assets/3258a59e-8d85-4a91-8661-18483faff7c2" />
+> <img width="294" height="627" alt="new state" src="https://github.com/user-attachments/assets/adb02a64-79aa-4fc9-9965-d713f486ecdd" />
+
 
 ---
 
@@ -86,25 +90,21 @@ Confirmed that the database is operational by connecting through a MySQL client 
 
 ```bash
 # Verify the pod is running and scheduled on the correct node
-kubectl get pods
-kubectl get statfulset
-kubectl get service mysql-headless
-kubectl describe pod mysql-0
+kubectl get pods -n ivolve
+kubectl get statfulset -n ivolve
+kubectl get service mysql-headless -n ivolve
 ```
 ## Screenshot
 >
-> <img width="924" height="203" alt="VERIFY" src="https://github.com/user-attachments/assets/ae3f794d-9d63-4006-9471-1dbbe2bd1406" />
->
-> <img width="940" height="597" alt="DESCRIBE POD" src="https://github.com/user-attachments/assets/0a3e08db-e8ae-4353-8737-4255c224e744" />
-> <img width="938" height="564" alt="DESCRIBE POD2" src="https://github.com/user-attachments/assets/b13d88c3-f6b5-478b-8988-9179ec958da7" />
+> <img width="884" height="203" alt="verify new" src="https://github.com/user-attachments/assets/b3e62e84-04a4-499d-9bb2-c2960b04c19b" />
 
 ---
 
 ```bash
 # Connect to MySQL
-kubectl exec -it mysql-0 -- mysql -u root -prootpassword
+kubectl exec -it mysql-0 -n ivolve -- mysql -u root -prootpassword
 
 ```
 ## Screenshot
 >
-> <img width="734" height="272" alt="EXEC" src="https://github.com/user-attachments/assets/a56a3890-2ee3-4c92-9f14-ee5a37ecf2eb" />
+> <img width="874" height="344" alt="new exec" src="https://github.com/user-attachments/assets/53f48b51-dd1e-49f0-b0d1-81387818b851" />
