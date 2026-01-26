@@ -50,7 +50,7 @@ Testing connectivity from the nodejs-app pod to the mysql-headless service on po
 Command:
 
 
-using `kubectl exec -it nodejs-app-5dd6d8cd76-fmp5d -n ivolve -- nc -zv mysql-headless 3306`
+using `kubectl exec -it nodejs-app-5dd6d8cd76-fmp5d -n ivolve -- /bin/sh nc -zv mysql-headless 3306`
 Result: Connection succeeded (as shown in the prompt returning without error), proving the application can still reach the database.
 >
 > <img width="1063" height="108" alt="exec" src="https://github.com/user-attachments/assets/6e2ffeab-84aa-47a2-bba3-9323b80bef51" />
