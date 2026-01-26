@@ -67,7 +67,8 @@ spec:
 ```
 ## Screenshot
 >
-> **<img width="467" height="580" alt="STORAGE YAML" src="https://github.com/user-attachments/assets/7a0523ef-046a-4648-82ae-c150a945330a" />**
+> <img width="545" height="542" alt="new yaml" src="https://github.com/user-attachments/assets/3bcc472c-a9eb-406e-9383-b3e98f3ad146" />
+
 
 ---
 
@@ -77,9 +78,9 @@ Checked the status to ensure the PV and PVC are successfully bound to each other
 
 ```bash
 kubectl get pv
-kubectl get pvc 
+kubectl get pvc -n ivolve
 
 ```
 ## Screenshot
 >
-> **<img width="1032" height="245" alt="VERIFY" src="https://github.com/user-attachments/assets/5de475f2-adab-4dc7-95f2-3d804d1fd1be" />**
+> <img width="1177" height="181" alt="new verify" src="https://github.com/user-attachments/assets/39ba7407-1da7-4365-a8d0-cc8a1f24740a" />
