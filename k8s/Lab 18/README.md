@@ -43,3 +43,17 @@ The policy was successfully applied to the cluster, ensuring that only authorize
 Using `kubectl describe networkpolicy allow-app-to-mysql -n ivolve`, we can verify the ingress rules and selectors.
 
 > <img width="1005" height="310" alt="des" src="https://github.com/user-attachments/assets/e7fcc79d-3216-4553-b117-86527437053c" />
+
+### 3. Authorized Access (Success Case)
+Testing connectivity from the nodejs-app pod to the mysql-headless service on port 3306.
+
+Command:
+
+
+using `kubectl exec -it nodejs-app-5dd6d8cd76-fmp5d -n ivolve -- nc -zv mysql-headless 3306`
+Result: Connection succeeded (as shown in the prompt returning without error), proving the application can still reach the database.
+>
+> <img width="1063" height="108" alt="exec" src="https://github.com/user-attachments/assets/6e2ffeab-84aa-47a2-bba3-9323b80bef51" />
+
+
+
