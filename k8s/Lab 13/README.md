@@ -7,7 +7,7 @@
 Since we are using `hostPath`, the directory must exist on the Kubernetes node with the correct permissions.
 
 * **Steps taken:**
-* Accessed the minikube node: `minikube ssh`
+* Accessed the minikube node: `minikube ssh -n minikube-m02`
 * Created the directory: `sudo mkdir -p /mnt/app-logs`
 * Set permissions: `sudo chmod 777 /mnt/app-logs`
 
