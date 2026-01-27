@@ -34,8 +34,8 @@ The repository is organized by module, following the core pillars of the DevOps 
 | --- | --- | --- | --- |
 | **01. Build Automation** | Maven / Gradle | Managing dependencies and standardizing build lifecycles. | ✔️ |
 | **02. Containerization** | Docker | Creating Dockerfiles, managing images, and container networking. | ✔️ |
-| **03. Orchestration** | Kubernetes | Deploying applications to K8s clusters using Pods, Services, and Deployments. | ⏳ |
-| **04. CI/CD Pipelines** | Jenkins | Automating the build, test, and deploy process. | ✔️ |
+| **03. Orchestration** | Kubernetes | Deploying applications to K8s clusters using Pods, Services, and Deployments. | ✔️ |
+| **04. CI/CD Pipelines** | Jenkins | Automating the build, test, and deploy process. | ⏳ |
 | **05. GitOps Workflow** | ArgoCD | Implementing "Infrastructure as Code" and Git-based deployments. | ⏳ |
 | **06. Linux Automation** | Ansible | Writing playbooks for automated server configuration and scaling. | ⏳ |
 
