@@ -79,7 +79,7 @@ kubectl get pods -n monitoring -o wide
 To confirm the metrics are being exposed correctly, run:
 
 ```bash
-curl http://<NODE_IP>:9100/metrics
+curl http://192.168.49.2:9100/metrics
 
 ```
 ## Screenshot
