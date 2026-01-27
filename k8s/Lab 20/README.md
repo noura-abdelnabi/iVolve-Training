@@ -78,7 +78,7 @@ kubectl create serviceaccount jenkins-sa -n ivolve
 
 ## Screenshot
 >
-> <img width="921" height="179" alt="ns + sa" src="https://github.com/user-attachments/assets/795a5c78-3653-4702-b090-d275ad3d5ff0" />
+> <img width="979" height="179" alt="ns + sa" src="https://github.com/user-attachments/assets/7f9054a0-86b7-4acb-a021-d36588dc1afa" />
 
 
 2. **Apply the Configurations**:
@@ -115,5 +115,4 @@ kubectl auth can-i delete pods --as=system:serviceaccount:ivolve:jenkins-sa -n i
 ```
 ## Screenshot
 >
-> <img width="1178" height="136" alt="AUTH" src="https://github.com/user-attachments/assets/1a8c9880-4dd8-4a2b-9e3a-4cbdeacb1322" />
-
+> <img width="1171" height="204" alt="VERIFY" src="https://github.com/user-attachments/assets/10ad2472-6de9-48de-a401-7ab38593898c" />
