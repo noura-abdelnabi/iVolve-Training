@@ -92,5 +92,5 @@ Ensure your files are organized as follows:
 > <img width="1588" height="323" alt="image on dockrhub" src="https://github.com/user-attachments/assets/eef45795-b4bb-48d5-9b77-231d54910ebf" />
 
 ### Kubernetes Status
-
-*Deployment and Service running on Minikube.*
+>
+> <img width="992" height="334" alt="deployment   service" src="https://github.com/user-attachments/assets/14ea379e-5e44-4e8a-b164-bb90d62b8fd9" />
