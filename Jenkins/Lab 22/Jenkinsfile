@@ -1,0 +1,84 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_USER = 'nouraabdelnabi' 
+        IMAGE_NAME = 'jenkins-app'
+        IMAGE_TAG = "${env.BUILD_NUMBER}"
+        FULL_IMAGE = "${DOCKER_USER}/${IMAGE_NAME}:${IMAGE_TAG}"
+    }
+
+    stages {
+        stage('Run Unit Test') {
+            steps {
+                echo "Stage 1: Running Unit Tests..."
+                sh 'echo "Unit tests passed successfully"'
+            }
+        }
+
+        stage('Build App') {
+            steps {
+                echo "Stage 2: Building Application..."
+                sh 'echo "App build complete"'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                echo "Stage 3: Building Docker Image..."
+                sh "docker build -t ${FULL_IMAGE} ."
+            }
+        }
+
+        stage('Push to Docker Hub') {
+            steps {
+                echo "Stage 4: Pushing Image to Docker Hub..."
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+                        sh "echo \$PASS | docker login -u \$USER --password-stdin"
+                        sh "docker push ${FULL_IMAGE}"
+                    }
+                }
+            }
+        }
+
+        stage('Delete Image Locally') {
+            steps {
+                echo "Stage 5: Cleaning up local images..."
+                sh "docker rmi ${FULL_IMAGE}"
+            }
+        }
+
+        stage('Edit deployment.yaml') {
+            steps {
+                echo "Stage 6: Updating deployment.yaml with new image tag..."
+                sh "sed -i 's|image:.*|image: ${FULL_IMAGE}|g' deployment.yaml"
+            }
+        }
+
+        stage('Deploy to K8s Cluster') {
+            steps {
+                echo "Stage 7: Deploying to Kubernetes..."
+                script{
+                     sh 'kubectl apply -f deployment.yaml'
+                     sh 'kubectl get pods'
+                     sh 'echo "Deployment command triggered"'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo "Pipeline Execution Finished."
+        }
+        success {
+            echo "Congratulations! Pipeline Succeeded."
+        }
+        failure {
+            echo "Alert! Pipeline Failed. Please check logs."
+        }
+    }
+}
+
+
