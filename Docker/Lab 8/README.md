@@ -27,6 +27,7 @@ cd Docker5
 📸 **Screenshot:**
 
 > Clone repository successfully
+> 
 > <img width="1053" height="201" alt="clone lab8-repo" src="https://github.com/user-attachments/assets/af97f892-b049-4721-955e-bddc95486151" />
 
 ---
@@ -94,6 +95,7 @@ docker network create ivolve-network
 📸 **Screenshot:**
 
 > Docker network created
+> 
 > <img width="986" height="179" alt="network create" src="https://github.com/user-attachments/assets/3f2b2949-9e79-45a1-a031-e066d839c316" />
 
 
@@ -122,6 +124,7 @@ docker run -d --name frontend2-container -p 5002:5000 frontend-image
 📸 **Screenshot:**
 
 > Running containers
+> 
 > <img width="1028" height="203" alt="3 cont" src="https://github.com/user-attachments/assets/786a71ff-0a8e-4523-a52c-00881f781fe4" />
 
 ---
@@ -143,6 +146,7 @@ docker exec -it frontend2-container ping backend-container
 📸 **Screenshot:**
 
 > Network communication test
+> 
 > <img width="1047" height="379" alt="verifying" src="https://github.com/user-attachments/assets/2c7d053d-d9c8-498d-8d15-dc1b3b7e28bf" />
 
 ---
@@ -159,6 +163,7 @@ docker network ls
 📸 **Screenshot:**
 
 > Network removed
+> 
 > <img width="682" height="181" alt="rm net" src="https://github.com/user-attachments/assets/eecc230e-939e-4c87-89db-4e993ea5adff" />
 
 ---
