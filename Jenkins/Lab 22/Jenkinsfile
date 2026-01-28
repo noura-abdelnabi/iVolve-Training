@@ -18,15 +18,21 @@ pipeline {
 
         stage('Build App') {
             steps {
-                echo "Stage 2: Building Application..."
-                sh 'echo "App build complete"'
+                echo "Stage 2: Building Application with Maven..."
+                dir('Jenkins/Lab 22') {
+                    sh 'mvn clean package -DskipTests'
+                    sh 'echo "App build complete"'
+                }
+                
             }
         }
 
         stage('Build Docker Image') {
             steps {
                 echo "Stage 3: Building Docker Image..."
-                sh "docker build -t ${FULL_IMAGE} './Jenkins/Lab 22/'"
+                dir('Jenkins/Lab 22') {
+                    sh "docker build -t ${FULL_IMAGE} ."
+                }
             }
         }
 
