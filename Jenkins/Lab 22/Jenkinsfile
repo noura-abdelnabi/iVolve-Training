@@ -26,7 +26,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo "Stage 3: Building Docker Image..."
-                sh "docker build -t ${FULL_IMAGE} ."
+                sh "docker build -t ${FULL_IMAGE} ./Jenkins/Lab\\ 22/"
             }
         }
 
@@ -52,7 +52,7 @@ pipeline {
         stage('Edit deployment.yaml') {
             steps {
                 echo "Stage 6: Updating deployment.yaml with new image tag..."
-                sh "sed -i 's|image:.*|image: ${FULL_IMAGE}|g' deployment.yaml"
+                sh "sed -i 's|image:.*|image: ${FULL_IMAGE}|g' Jenkins/Lab\\ 22/deployment.yaml"
             }
         }
 
@@ -60,7 +60,7 @@ pipeline {
             steps {
                 echo "Stage 7: Deploying to Kubernetes..."
                 script{
-                     sh 'kubectl apply -f deployment.yaml'
+                     sh 'kubectl apply -f Jenkins/Lab\\ 22/deployment.yaml'
                      sh 'kubectl get pods'
                      sh 'echo "Deployment command triggered"'
                 }
