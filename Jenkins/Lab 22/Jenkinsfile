@@ -58,15 +58,17 @@ pipeline {
         stage('Edit deployment.yaml') {
             steps {
                 echo "Stage 6: Updating deployment.yaml with new image tag..."
-                sh "sed -i 's|image:.*|image: ${FULL_IMAGE}|g' Jenkins/Lab 22/deployment.yaml"
+                dir('Jenkins/Lab 22'){
+                sh "sed -i 's|image:.*|image: ${FULL_IMAGE}|g' deployment.yaml"
+                }
             }
         }
 
         stage('Deploy to K8s Cluster') {
             steps {
                 echo "Stage 7: Deploying to Kubernetes..."
-                script{
-                     sh 'kubectl apply -f Jenkins/Lab 22/deployment.yaml'
+                dir('Jenkins/Lab 22'){
+                     sh 'kubectl apply -f deployment.yaml'
                      sh 'kubectl get pods'
                      sh 'echo "Deployment command triggered"'
                 }
