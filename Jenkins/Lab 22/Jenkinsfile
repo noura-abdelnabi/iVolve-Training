@@ -26,7 +26,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo "Stage 3: Building Docker Image..."
-                sh "docker build -t ${FULL_IMAGE} ./Jenkins/Lab\\ 22/"
+                sh "docker build -t ${FULL_IMAGE} './Jenkins/Lab\\ 22/'"
             }
         }
 
