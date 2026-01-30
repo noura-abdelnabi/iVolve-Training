@@ -1,7 +1,7 @@
 @Library('shared-lib') _ 
 
 pipeline {
-    agent { label 'slave-node' } 
+    agent { label 'linux-agent' } 
 
     environment {
         IMAGE_NAME = "nouraabdelnabi/jenkins-app:${env.BUILD_ID}"
