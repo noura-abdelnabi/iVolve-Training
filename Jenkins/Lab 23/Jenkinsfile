@@ -15,19 +15,25 @@ pipeline {
     stages {
         stage('Unit Test & Build App') {
             steps {
-                buildApp() 
+                dir('Jenkins/Lab 23') {
+                    buildApp() 
+                }
             }
         }
 
         stage('Build & Push Image') {
             steps {
-                buildAndPushImage(env.IMAGE_NAME, env.DOCKER_CREDS_ID)
+                dir('Jenkins/Lab 23') {
+                    buildAndPushImage(env.IMAGE_NAME, env.DOCKER_CREDS_ID)
+                }
             }
         }
 
         stage('Deploy to K8s') {
             steps {
-                deployToK8s(env.IMAGE_NAME, env.DEPLOYMENT_FILE, env.K8S_TOKEN_ID, env.K8S_API_ID)
+                dir('Jenkins/Lab 23') {
+                    deployToK8s(env.IMAGE_NAME, env.DEPLOYMENT_FILE, env.K8S_TOKEN_ID, env.K8S_API_ID)
+                }
             }
         }
     }
