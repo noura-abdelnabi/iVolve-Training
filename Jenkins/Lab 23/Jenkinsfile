@@ -1,0 +1,50 @@
+@Library('shared-lib') _ 
+
+pipeline {
+    agent { label 'slave-node' } 
+
+    environment {
+        IMAGE_NAME = "nouraabdelnabi/jenkins-app:${env.BUILD_ID}"
+        DEPLOYMENT_FILE = "deployment.yaml"
+        
+        DOCKER_CREDS_ID = 'docker-hub-creds'
+        K8S_TOKEN_ID    = 'k8s-token' 
+        K8S_API_ID      = 'k8s-api'   
+    }
+
+    stages {
+        stage('Unit Test & Build App') {
+            steps {
+                buildApp() 
+            }
+        }
+
+        stage('Build & Push Image') {
+            steps {
+                buildAndPushImage(env.IMAGE_NAME, env.DOCKER_CREDS_ID)
+            }
+        }
+
+        stage('Deploy to K8s') {
+            steps {
+                deployToK8s(env.IMAGE_NAME, env.DEPLOYMENT_FILE, env.K8S_TOKEN_ID, env.K8S_API_ID)
+            }
+        }
+    }
+
+    post {
+        always {
+            echo "Pipeline finished."
+        }
+        success {
+            echo "Application deployed successfully!"
+        }
+        failure {
+            echo "Pipeline failed. Check the logs."
+        }
+    }
+}
+
+
+
+
