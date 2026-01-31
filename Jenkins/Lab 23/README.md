@@ -48,7 +48,7 @@ This project demonstrates a complete CI/CD Pipeline for a Spring Boot applicatio
   > "Global Pipeline Libraries configuration in Jenkins."
 
 
-3. **Library Structure (GitHub)**:
+3. **Library Structure (GitHub: https://github.com/noura-abdelnabi/SahredLibrary-NTI.git)**:
   >
   > <img width="1106" height="481" alt="shared-lib repo" src="https://github.com/user-attachments/assets/436b478f-d933-4877-a809-c22d9ee683fc" /> 
   > "Structure of the Jenkins Shared Library repository."
