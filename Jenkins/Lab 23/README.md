@@ -90,15 +90,14 @@ This project demonstrates a complete CI/CD Pipeline for a Spring Boot applicatio
 
 4. **Docker Hub Repository**:
   >
-  > 
+  > <img width="939" height="639" alt="dockerhub image" src="https://github.com/user-attachments/assets/6e4c1696-70b3-4229-8747-0074856592a4" />
   > "Docker Image pushed successfully to Docker Hub."
 
 
 5. **Kubernetes Deployment**:
   >
-  >
+  > <img width="976" height="316" alt="kubernetes" src="https://github.com/user-attachments/assets/51070d44-a9fe-4928-954f-df537c1b2501" />
   > "Application deployed and running on Minikube."
-
 
 
 ---
