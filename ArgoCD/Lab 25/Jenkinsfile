@@ -6,7 +6,7 @@ pipeline {
         REPO_NAME       = 'jenkins-app'
         IMAGE_NAME      = "${DOCKER_HUB_USER}/${REPO_NAME}"
         IMAGE_TAG       = "${env.BUILD_NUMBER}"
-        GITHUB_REPO_URL = 'github.com/nouraabdelnabi/jenkins-app.git'
+        GITHUB_REPO_URL = 'github.com/nouraabdelnabi/iVolve-Training.git'
     }
 
     stages {
