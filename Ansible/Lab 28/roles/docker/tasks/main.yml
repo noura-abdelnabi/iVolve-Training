@@ -1,0 +1,14 @@
+- name: Add Docker CE Repo
+  get_url:
+    url: https://download.docker.com/linux/centos/docker-ce.repo
+    dest: /etc/yum.repos.d/docker-ce.repo
+
+- name: Install Docker CE
+  dnf:
+    name: 
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+    state: present
+    disable_gpg_check: yes
+
