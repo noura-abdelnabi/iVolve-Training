@@ -1,5 +1,5 @@
 ---
-- name: lab28 configurayion
+- name: lab28 configuration
   hosts: servers
   become: yes
   roles:
