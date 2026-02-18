@@ -53,7 +53,3 @@ The database `iVolve` and the user `ivolve_user` were successfully created on th
 * **Automation:** Ansible (Dynamic Inventory, Vault, Playbooks)
 * **OS:** Ubuntu 24.04 (Managed Node)
 * **Database:** MySQL Server
-
-لما تيجي ترفعي السكرينات، تأكدي إنك تغطي أو تخفي الـ **Access Key ID** لو ظهر في أي ملف عشان الأمان.
-
-**عاش جداً يا نورا، لو محتاجة أي مساعدة في اللابات الجاية (زي Terraform أو Jenkins) أنا موجود! تحبي نجهز حاجة تانية؟**
